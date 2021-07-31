@@ -46,6 +46,7 @@ namespace CcesStatsCalculator.Stats
             foreach (var l in characterLines)
                 l.Line = l.Line.Replace("!", "")
                     .Replace("?", "")
+                    .ToLowerInvariant()
                     .Trim();
 
             var sb = new StringBuilder();
